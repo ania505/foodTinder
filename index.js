@@ -1,7 +1,7 @@
 // new entry point for NODE process
 
 // say our sequelize instance is create in 'db.js'
-const db = require('./db.js'); 
+const db = require('./server/db/db.js'); 
 // and our server that we already created and used as the previous entry point is 'server.js'
 // ^^ actually should go to /server/index.js bc thats where app is exported
 const app = require('./server');
