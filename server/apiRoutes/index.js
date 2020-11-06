@@ -2,6 +2,7 @@ const router = require('express').Router();
 
 //table of contents
 router.use('/users', require('./users'));
+router.use('/auth', require('./google'));
 //add other api routes if you have them
 // handling melody db
 

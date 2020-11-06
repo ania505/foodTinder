@@ -18,9 +18,9 @@ const User = db.define('user', {
         }
         //adjust field so that it salts and hashes, never store plain password
     },
-    // googleId: {
-    //     type: Sequelize.STRING,
-    // },
+    googleId: {
+        type: Sequelize.STRING,
+    },
     salt: {
         type: Sequelize.STRING
     },
@@ -32,7 +32,7 @@ const User = db.define('user', {
 });
 
 //instance methods
-User.prototype.correctPassowrd = function (candidatePassword) {
+User.prototype.correctPassword = function (candidatePassword) {
     return this.Model.encryptPassword(candidatePassword, this.salt) === this.password;
 };
 

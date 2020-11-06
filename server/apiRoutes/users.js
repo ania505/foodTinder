@@ -40,7 +40,7 @@ router.put('/login', async (req, res, next) => {
                 if (err) next(err);
                 else res.json(user);
             })
-            // where does req.login come from??
+            // where does req.login come from?? >>passport ithink
         }
 
     } catch (error) {
